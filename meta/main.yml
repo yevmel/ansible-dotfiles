@@ -1,0 +1,9 @@
+---
+galaxy_info:
+  author: Yevgeniy Melnichuk
+  description: pulls dotfiles from a git repository.
+  license: MIT
+  min_ansible_version: 1.9
+  platforms:
+  categories:
+  - development
