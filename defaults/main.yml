@@ -1,0 +1,5 @@
+---
+username  : vagrant
+groupname : '{{ username }}'
+url       : https://github.com/yevmel/dotfiles.git
+home      : /home/{{ username }}/.dotfiles

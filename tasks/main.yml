@@ -1,0 +1,14 @@
+---
+- name: create dotfiles directory
+  file: path='{{ home }}' state=directory owner={{ username }} group={{ groupname}}
+  sudo: yes
+
+- name: checkout dotfiles
+  git: repo={{ url }} dest={{ home }}
+  register: checkout_dotfiles_result
+
+- name: install dotfiles
+  command: bash install.sh
+  args:
+    chdir: '{{ home }}'
+  when: checkout_dotfiles_result.changed
